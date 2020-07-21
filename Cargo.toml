@@ -4,4 +4,16 @@ version = "0.1.0"
 authors = ["Bob Chen <chenbobby168@gmail.com>"]
 edition = "2018"
 
+[[bin]]
+name = "bl"
+path = "src/main.rs"
+
+[lib]
+name = "bobabyte_labs"
+path = "src/lib.rs"
+
+[profile.dev]
+no-vectorize-loops = true
+
 [dependencies]
+rand = "0.7.3"

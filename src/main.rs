@@ -5,5 +5,4 @@ use bobabyte_labs::simd;
 
 fn main() {
     simd::hello();
-    loops::hello();
 }
