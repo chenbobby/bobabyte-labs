@@ -1,3 +1,6 @@
+///
+/// Imports
+///
 use std::arch::x86_64;
 
 pub fn hello() {
@@ -13,14 +16,14 @@ pub fn hello() {
 /// the loop based on the compilation target. You can disable auto-vectorization by
 /// using the flag `no-vectorize-loops`. See https://doc.rust-lang.org/cargo/reference/profiles.html
 /// for more details.
-fn vector_add(slice1: &[i32], slice2: &[i32], result_slice: &mut [i32]) {
+pub fn vector_add(slice1: &[i32], slice2: &[i32], result_slice: &mut [i32]) {
     let iterator = slice1.iter().zip(slice2).zip(result_slice);
     for ((ptr1, ptr2), result_ptr) in iterator {
         *result_ptr = *ptr1 + *ptr2;
     }
 }
 
-unsafe fn vector_add_sse2(slice1: &[i32], slice2: &[i32], result_slice: &mut [i32]) {
+pub unsafe fn vector_add_sse2(slice1: &[i32], slice2: &[i32], result_slice: &mut [i32]) {
     let iterator = slice1.iter().zip(slice2).zip(result_slice).step_by(4);
     for ((ptr1, ptr2), result_ptr) in iterator {
         // Build a 128-bit vector from four 32-bit integers in `slice1`.
@@ -51,7 +54,7 @@ mod tests {
     /// 
     /// Constants
     ///
-    const VECTOR_LENGTH: usize = 16;
+    const VECTOR_LENGTH: usize = 2048;
     const MIN: i32 = i32::MIN/2;
     const MAX: i32 = i32::MAX/2;
 

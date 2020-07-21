@@ -12,8 +12,15 @@ path = "src/main.rs"
 name = "bobabyte_labs"
 path = "src/lib.rs"
 
+[[bench]]
+name = "simd"
+harness = false
+
 [profile.dev]
 no-vectorize-loops = true
 
 [dependencies]
+
+[dev-dependencies]
+criterion = "0.3.3"
 rand = "0.7.3"
