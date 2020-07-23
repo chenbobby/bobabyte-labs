@@ -1,5 +1,5 @@
 # Bobabyte Labs
-A collection of labs and experiments for articles on [bobabyte.com](bobabyte.com).
+A collection of labs and experiments for articles on [bobchen.io](bobchen.io).
 
 ## Table of Modules
 | Module | Description |
