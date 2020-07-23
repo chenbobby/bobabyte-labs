@@ -1,4 +1,4 @@
-# Bobabyte Labs
+# Research Labs
 A collection of labs and experiments for articles on [bobchen.io](bobchen.io).
 
 ## Table of Modules
