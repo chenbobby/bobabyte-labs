@@ -1,3 +1,6 @@
+///
+/// Imports
+///
 use bobabyte_labs::simd;
 use criterion::{criterion_group, criterion_main, Criterion};
 use rand::Rng;
