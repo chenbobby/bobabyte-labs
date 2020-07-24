@@ -16,6 +16,10 @@ path = "src/lib.rs"
 name = "simd"
 harness = false
 
+[[bench]]
+name = "loops"
+harness = false
+
 [profile.dev]
 no-vectorize-loops = true
 
