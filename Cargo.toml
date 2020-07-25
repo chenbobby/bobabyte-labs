@@ -1,15 +1,15 @@
 [package]
-name = "bobabyte_labs"
+name = "labs"
 version = "0.1.0"
 authors = ["Bob Chen <chenbobby168@gmail.com>"]
 edition = "2018"
 
 [[bin]]
-name = "bl"
+name = "labs"
 path = "src/main.rs"
 
 [lib]
-name = "bobabyte_labs"
+name = "labs"
 path = "src/lib.rs"
 
 [[bench]]
